@@ -77,8 +77,8 @@
         <span>K</span><span>a</span><span>r</span><span>i</span><span>n</span><span>a</span>
     </div>
     <div class="search-container">
-        <input type="text" placeholder="老板，想搜点什么？">
-        <button onclick="console.log('Redirecting...'); window.location.href='https://www.google.com';">搜索</button>
+        <input type="text" id="searchInput" placeholder="老板，想搜点什么？">
+        <button onclick="const q = document.getElementById('searchInput').value; window.location.href='https://www.google.com/search?q=' + encodeURIComponent(q);">搜索</button>
     </div>
     <div class="footer">
         伦敦 · 由 Karina 秘书为您部署
