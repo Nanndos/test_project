@@ -31,37 +31,38 @@
         .search-container {
             width: 90%;
             max-width: 584px;
-            position: relative;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 12px 20px;
-            font-size: 16px;
+            display: flex; /* Use flexbox for alignment */
             border: 1px solid #dfe1e5;
             border-radius: 24px;
-            outline: none;
             transition: box-shadow 0.2s;
         }
-        input[type="text"]:hover, input[type="text"]:focus {
+        .search-container:hover, .search-container:focus-within {
             box-shadow: 0 1px 6px rgba(32,33,36,0.28);
             border-color: rgba(223,225,229,0);
         }
-        .buttons {
-            margin-top: 20px;
+
+        input[type="text"] {
+            flex-grow: 1; /* Allow input to take available space */
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 24px 0 0 24px;
+            outline: none;
+            background: transparent;
         }
+        
         button {
-            padding: 10px 16px;
+            padding: 10px 20px;
+            border: none;
+            border-left: 1px solid #dfe1e5; /* Separator line */
+            border-radius: 0 24px 24px 0;
             background-color: #f8f9fa;
-            border: 1px solid #f8f9fa;
-            border-radius: 4px;
+            cursor: pointer;
             font-size: 14px;
             color: #3c4043;
-            cursor: pointer;
-            margin: 0 5px;
         }
         button:hover {
-            border: 1px solid #dadce0;
-            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            background-color: #f1f1f1;
         }
         .footer {
             position: absolute;
@@ -77,10 +78,7 @@
     </div>
     <div class="search-container">
         <input type="text" placeholder="老板，想搜点什么？">
-    </div>
-    <div class="buttons">
-        <button onclick="window.location.href='https://www.google.com';">Google 搜索</button>
-        <button>手气不错</button>
+        <button onclick="window.location.href='https://www.google.com';">搜索</button>
     </div>
     <div class="footer">
         伦敦 · 由 Karina 秘书为您部署
