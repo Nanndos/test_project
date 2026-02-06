@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        .logo {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #4285F4;
+        }
+        .logo span:nth-child(2) { color: #EA4335; }
+        .logo span:nth-child(3) { color: #FBBC05; }
+        .logo span:nth-child(4) { color: #4285F4; }
+        .logo span:nth-child(5) { color: #34A853; }
+        .logo span:nth-child(6) { color: #EA4335; }
+        
+        .search-container {
+            width: 90%;
+            max-width: 584px;
+            position: relative;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+            transition: box-shadow 0.2s;
+        }
+        input[type="text"]:hover, input[type="text"]:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            border-color: rgba(223,225,229,0);
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 16px;
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #3c4043;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        button:hover {
+            border: 1px solid #dadce0;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 13px;
+            color: #70757a;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <span>K</span><span>a</span><span>r</span><span>i</span><span>n</span><span>a</span>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="老板，想搜点什么？">
+    </div>
+    <div class="buttons">
+        <button>Google 搜索</button>
+        <button>手气不错</button>
+    </div>
+    <div class="footer">
+        伦敦 · 由 Karina 秘书为您部署
+    </div>
+</body>
+</html>
